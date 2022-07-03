@@ -6,21 +6,21 @@ In this tutorial, you will learn how to build a complete vpc stack and ec2 insta
 I recommend AWS official documentation.
 
 
-### prerequisite:
+### Prerequisite:
 - An AWS Account 
 - AWS CDK package
 - AWS-CLI
 
 ### How to install aws-CDK in windows 
 
-#### step 01.
+#### Step 01.
 Install nodejs in your local system.
 
-#### step 02.
+#### Step 02.
 open your windows command prompt and run npm install -g aws-CDK (install the latest version)
 To install a specific version. npm install -g aws-cdk@XX
 
-#### step 03.
+#### Step 03.
 Verify cdk installed in your system by executing  CDK --version. 
 
 
@@ -33,7 +33,7 @@ Install nodejs in your Linux system.
 #### Step 02
 Run npm install -g aws-cdk to install cdk in your Linux system.
 
-#### step 03.
+#### Step 03.
 Verify that cdk installed in your system by executing the cdk --version. 
 
 
