@@ -80,4 +80,4 @@ Verify that cdk installed in your system by executing the cdk --version.
  
 
 
- ### Please note : In this tutorial, I've exclude couple of files and folders(cdk.out file node-module folder). Therefore, I would like to recommend follow above mentioned steps in your computer and create your own cdk project folder and change the values in the /lib/*.ts file configurations.
+ ### Please note : In this tutorial, I've exclude couple of files and folders(cdk.out file node-module folder). Therefore, I would like to recommend follow above mentioned steps in your computer and create your own cdk project folder and change the values in the /lib/*.ts file.
