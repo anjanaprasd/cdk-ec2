@@ -7,7 +7,7 @@ import { Regions } from 'cdktf-sms';
 const app = new cdk.App();
 new ExampleEc2Stack(app, 'ExampleEc2Stack', {
   
-  env: { account: '894452424502', region: 'us-east-1' },
+  env: { account: '${account-id}', region: 'us-east-1' },
 
   tags: {
     App: 'Demo',
