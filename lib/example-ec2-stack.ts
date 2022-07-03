@@ -96,26 +96,6 @@ export class ExampleEc2Stack extends Stack {
 
   }
 
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   
   }
 }
