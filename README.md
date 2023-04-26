@@ -1,83 +1,68 @@
-# Build AWS VPC stack and multiple ec2 instances using AWS-CDK
+#### *Build AWS VPC stack and multiple ec2 instances using AWS-CDK*
 
 
-#### About this project.
-In this tutorial, you will learn how to build a complete vpc stack and ec2 instance, a security group with few rules using CDK. Also could learn CDK installation and the basic commands of AWS CDK.feel free to modify this project base on your requirements. In this project, the author has used level-02 CDK constructs. If you want to learn more about AWS-CDK, 
-I recommend AWS official documentation.
+About this project:
+This project demonstrates how to build a complete VPC stack and EC2 instances, along with a security group and rules, using AWS CDK. This project uses Level-02 CDK constructs. If you want to learn more about AWS CDK, please refer to the AWS official documentation.
 
+Prerequisites:
 
-### Prerequisite:
-- An AWS Account 
-- AWS CDK package
-- AWS-CLI
+    An AWS account
+    AWS CDK package
+    AWS CLI
 
-### How to install aws-CDK in windows 
+How to install AWS CDK on Windows:
+Step 1:
+Install Node.js on your local system.
 
-#### Step 01.
-Install nodejs in your local system.
+Step 2:
+Open your Windows command prompt and run "npm install -g aws-cdk" to install the latest version. To install a specific version, use "npm install -g aws-cdk@XX".
 
-#### Step 02.
-open your windows command prompt and run npm install -g aws-CDK (install the latest version)
-To install a specific version. npm install -g aws-cdk@XX
+Step 3:
+Verify that CDK is installed on your system by executing "cdk --version".
 
-#### Step 03.
-Verify cdk installed in your system by executing  CDK --version. 
+How to install AWS CDK on Linux:
+Step 1:
+Install Node.js on your Linux system.
 
+Step 2:
+Run "npm install -g aws-cdk" to install CDK on your Linux system.
 
+Step 3:
+Verify that CDK is installed on your system by executing "cdk --version".
 
-### Install aws-CDK in Linux.
+Getting started with CDK:
+Create a project directory using "mkdir myexample-cdkdemo" and navigate to the directory using "cd myexample-cdkdemo".
 
-#### Step 01.
-Install nodejs in your Linux system.
+Now, initialize the app using the "cdk init" command. In this example, the author has used the basic CDK app constructs by executing "cdk init app --language typescript". Once you execute this command, relevant configuration files will be downloaded into the project folder.
 
-#### Step 02
-Run npm install -g aws-cdk to install cdk in your Linux system.
+How to install the required CDK modules:
 
-#### Step 03.
-Verify that cdk installed in your system by executing the cdk --version. 
+    To install the "@aws-cdk/aws-ec2@1.134.0" module, run "npm install @aws-cdk/aws-ec2@1.134.0" and import the module using "* as ec2 from 'aws-cdk-lib/aws-ec2'".
+    To install the main AWS CDK package, run "npm install aws-cdk-lib" and import it using "import 'aws-cdk-lib' as cdk".
 
+How to execute this project:
+Before executing this project, verify that AWS CDK is installed on your local system by running the "cdk --version" command.
 
-### Getting started with CDK
+CDK requires bootstraps installed in your system. Using bootstrap, CDK will convert your code into a CloudFormation template. To bootstrap, run "cdk bootstrap".
 
-1. create project directory mkdir myexample-cdkdemo and run cd myexample-cdkdemo.
-2. Now, initialize the app using the cdk init command and this example author has used the basic cdk app constructs.
-3. cdk init app --language typescript. Once you execute, it will download relevant configuration files into the project folder.
+Run "cdk synth" to translate your code into an AWS CloudFormation template.
 
+Run "cdk deploy" to deploy the stack in AWS. Once you execute this command, a CloudFormation template will be created in AWS and the resources will be deployed.
 
-### How to install the required CDK module.
+Run "cdk destroy" to destroy the stack.
 
-- npm install @aws-cdk/aws-ec2@1.134.0 
-  import * as ec2 from 'aws-cdk-lib/aws-ec2';
+In the process, we also learned a bunch of related concepts such as:
 
-- npm install aws-cdk-lib (Main AWS CDK package)
-  import 'aws-cdk-lib' as cdk;
+    How to install AWS CDK
+    How to use it to define a VPC stack, subnets
+    How to reference an AMI
+    How to add security groups and multiple rules
+    Basic commands in CDK
 
+Useful commands:
 
-### How to execute this project.
+    "npx aws-cdk init --list": This lists the available options in CDK.
+    "cdk diff": Use the "cdk diff" command to check the difference between the CDK code and the already deployed environment.
+    "cdk ls": This lists the CDK stacks.
 
-1. Verify aws-cdk has installed in your local system running the cdk --version command.
-2. CDK require bootstraps installed in your system. Using bootstrap cdk will convert your code into a cloud formation template. 
-  - cdk bootstrap
-3. Run cdk synth it to be translated into an AWS CloudFormation template.
-4. cdk deploy command to deploy stack in AWs. Once you execute the deploy command, it will create a cloud formation template in AWS and deploy the resources.
-5. cdk destroy command to destroy stack.
-
-
-### In the process, we also learned a bunch of related concepts such as:
-
-- How to install AWS CDK.
-- How to use it to define a VPC stack, subnets.
-- How to reference an AMI.
-- How to add security groups and multiple rules.
-- Basic commands in cdk.
-
-
-## Useful commands
-
-  * npx aws-cdk init --list: This lists available option in CDK.
-  * cdk diff: Using the cdk diff command can check the difference between the cdk code and the already deployed environment.cdk ls
-  * cdk ls : list cdk stacks.
- 
-
-
- ### Please note : In this tutorial, I've exclude couple of files and folders(cdk.out file node-module folder). Therefore, I would like to recommend follow above mentioned steps in your computer and create your own cdk project folder and change the values in the /lib/*.ts file.
+Please note: In this tutorial, a few files and folders (cdk.out file, node-module folder) have been excluded. Therefore, it is recommended to follow the above-mentioned steps on your computer, create your own CDK project folder, and change the values in the "/lib/*.ts" file.
